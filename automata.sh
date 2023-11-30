@@ -1,13 +1,16 @@
 # config.sh
 
+# if you don't have 3 nodes, leave input_text like this   ""  (delete- Your_Node_API)
+# telegram_url line - put your BotToken instead xxxxxxxxxxxxxxxxxxxxx (dont delete the word 'bot')
+# chatID = your telegram chatid
 
-input_text1="YourAPI1"
-input_text2="YourAPI2"
-input_text3="YourAPI3"
-telegram_url="https://api.telegram.org/botxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/sendMessage"
+input_text1="Your_Node1_API"
+input_text2="Your_Node2_API"
+input_text3="Your_Node3_API"
+telegram_url="https://api.telegram.org/botxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/sendMessage"
 chat_id="xxxxxxxxx"
-start_time="08:00"  # Set the desired start time in HH:MM format
-work_duration="6h 10m"
+start_time="07:02"  # Set the desired start time in HH:MM format
+work_duration="6h 20m"
 
 # main.sh
 
@@ -87,6 +90,11 @@ while true; do
         ((counter++))
         echo "The value of API is: $input_text1"
         start_service $input_text1
+        output=$(/usr/local/bin/myria-node --status)
+        #    Format the output for sending via Telegram
+        message=$(echo -e "Command output:\n$output")
+        echo $message
+        send_notification "$message"
         sleep $work_duration
         stop_service $input_text1
     else
@@ -97,6 +105,11 @@ while true; do
         ((counter++))
         echo "The value of API is: $input_text2"
         start_service $input_text2
+        output=$(/usr/local/bin/myria-node --status)
+        #    Format the output for sending via Telegram
+        message=$(echo -e "Command output:\n$output")
+        echo $message
+        send_notification "$message"
         sleep $work_duration
         stop_service $input_text2
     else
@@ -107,6 +120,11 @@ while true; do
         ((counter++))
         echo "The value of API is: $input_text3"
         start_service $input_text3
+        output=$(/usr/local/bin/myria-node --status)
+        #    Format the output for sending via Telegram
+        message=$(echo -e "Command output:\n$output")
+        echo $message
+        send_notification "$message"
         sleep $work_duration
         stop_service $input_text3
     else
