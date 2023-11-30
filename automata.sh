@@ -11,7 +11,7 @@ input_text2="Your_Node2_API"
 input_text3="Your_Node3_API"
 telegram_url="https://api.telegram.org/botxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/sendMessage"
 chat_id="xxxxxxxxx"
-start_time="07:02"  # Set the desired start time in HH:MM format
+start_time="08:02"  # Set the desired start time in HH:MM format
 work_duration="6h 20m"
 
 # main.sh
