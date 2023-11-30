@@ -1,3 +1,4 @@
+#!/bin/bash
 # config.sh
 
 # if you don't have 3 nodes, leave input_text like this   ""  (delete- Your_Node_API)
