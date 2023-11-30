@@ -3,6 +3,7 @@
 # if you don't have 3 nodes, leave input_text like this   ""  (delete- Your_Node_API)
 # telegram_url line - put your BotToken instead xxxxxxxxxxxxxxxxxxxxx (dont delete the word 'bot')
 # chatID = your telegram chatid
+# if you dont want telegram messages, leave telegram_url as it is
 
 input_text1="Your_Node1_API"
 input_text2="Your_Node2_API"
