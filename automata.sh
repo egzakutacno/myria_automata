@@ -11,9 +11,9 @@ else
     # Ask the user for API keys and other configurations
     read -p "Enter Your_Node 1 API: " input_text1
     read -p "Enter Your_Node 2 API: " input_text2
-    read -p "Enter Your_Node 3 API: " input_text3
-    read -p "Enter your Telegram Bot Token (leave blank to continue without telegram notifications) : " bot_token
-    read -p "Enter your Telegram Chat ID (leave blank to continue without telegram notifications): " chat_id
+    read -p "Enter Your_Node 3 API (press:↵ Enter to skip) : " input_text3
+    read -p "Enter your Telegram Bot Token (press:↵ Enter to continiue without telegram notifications) : " bot_token
+    read -p "Enter your Telegram Chat ID (press:↵ Enter to continiue without telegram notifications): " chat_id
     read -p "Enter the work duration of each node (e.g., 6h 20m): " work_duration
 
     start_time="08:03"  # Set the desired start time in HH:MM format
