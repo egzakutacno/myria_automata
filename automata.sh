@@ -11,15 +11,15 @@ input_text2="Your_Node2_API"
 input_text3="Your_Node3_API"
 telegram_url="https://api.telegram.org/botxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/sendMessage"
 chat_id="xxxxxxxxx"
-start_time="08:03"  # Set the desired start time in HH:MM format
+start_time="08:02"  # Set the desired start time in HH:MM format
 work_duration="6h 20m"
 
 # main.sh
 
 # Source the configuration file
 # source config.sh
-start_command="myria-node --start"
-stop_command="myria-node --stop"
+start_command="/usr/local/bin/myria-node --start"
+stop_command="/usr/local/bin/myria-node --stop"
 
 # Function to start the service with input text
 send_notification() {
