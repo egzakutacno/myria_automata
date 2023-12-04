@@ -1,18 +1,33 @@
 #!/bin/bash
 # config.sh
 
-# if you don't have 3 nodes, leave input_text like this   ""  (delete- Your_Node_API)
-# telegram_url line - put your BotToken instead xxxxxxxxxxxxxxxxxxxxx (dont delete the word 'bot')
-# chatID = your telegram chatid
-# if you dont want telegram messages, leave telegram_url as it is
+config_file="config.txt"
 
-input_text1="Your_Node1_API"
-input_text2="Your_Node2_API"
-input_text3="Your_Node3_API"
-telegram_url="https://api.telegram.org/botxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/sendMessage"
-chat_id="xxxxxxxxx"
-start_time="08:02"  # Set the desired start time in HH:MM format
-work_duration="6h 20m"
+# Check if the configuration file exists
+if [ -f "$config_file" ]; then
+    # Configuration file exists, source it
+    source "$config_file"
+else
+    # Ask the user for API keys and other configurations
+    read -p "Enter Your_Node 1 API: " input_text1
+    read -p "Enter Your_Node 2 API: " input_text2
+    read -p "Enter Your_Node 3 API: " input_text3
+    read -p "Enter your Telegram Bot Token (leave blank to continue without telegram notifications) : " bot_token
+    read -p "Enter your Telegram Chat ID (leave blank to continue without telegram notifications): " chat_id
+    read -p "Enter the work duration of each node (e.g., 6h 20m): " work_duration
+
+    start_time="08:03"  # Set the desired start time in HH:MM format
+    # Set the Telegram URL using the provided bot token
+    telegram_url="https://api.telegram.org/bot$bot_token/sendMessage"
+
+    # Save the entered values to the configuration file
+    echo "input_text1=\"$input_text1\"" > "$config_file"
+    echo "input_text2=\"$input_text2\"" >> "$config_file"
+    echo "input_text3=\"$input_text3\"" >> "$config_file"
+    echo "bot_token=\"$bot_token\"" >> "$config_file"
+    echo "chat_id=\"$chat_id\"" >> "$config_file"
+    echo "work_duration=\"$work_duration\"" >> "$config_file"
+fi
 
 # main.sh
 
