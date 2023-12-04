@@ -136,6 +136,5 @@ while true; do
     # work_time = $(($counter * $work_duration))
     # Add an exit statement to terminate the script after the loop
 exit 0
-done
 
 done
