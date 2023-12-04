@@ -35,11 +35,11 @@ start_service() {
 
     # Check if the service started successfully
     if [ $? -eq 0 ]; then
-        echo "Service started successfully with command: $start_command"
-        send_notification "Service started successfully with command: $start_command"
+        echo "Service started successfully"
+        send_notification "Service started successfully"
     else
-        echo "Failed to start service with command: $start_command"
-        send_notification "Failed to start service with command: $start_command"
+        echo "Failed to start service"
+        send_notification "Failed to start service"
         exit 1
     fi
 }
@@ -51,11 +51,11 @@ stop_service() {
 
     # Check if the service stopped successfully
     if [ $? -eq 0 ]; then
-        echo "Service stopped successfully with command: $stop_command"
-        send_notification "Service stopped successfully with command: $stop_command"
+        echo "Service stopped successfully"
+        send_notification "Service stopped successfully"
     else
-        echo "Failed to stop service with command: $stop_command"
-        send_notification "Failed to stop service with command: $stop_command"
+        echo "Failed to stop service"
+        send_notification "Failed to stop service"
     fi
 }
 
