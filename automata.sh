@@ -147,9 +147,8 @@ while true; do
     else
         echo "Variable3 does not exist."
     fi
-
-    # work_time = $(($counter * $work_duration))
-    # Add an exit statement to terminate the script after the loop
+done
+# Exit the script after completing the loop
 exit 0
 
-done
+
