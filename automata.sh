@@ -16,7 +16,7 @@ else
     read -p "Enter your Telegram Chat ID (press:↵ Enter to continue without telegram notifications): " chat_id
     read -p "Enter the work duration of each node (e.g., 6h 20m): " work_duration
     telegram_url="https://api.telegram.org/bot$bot_token/sendMessage"
-    start_time="12:09"  # Set the desired start time in HH:MM format
+    #start_time="12:09"  # Set the desired start time in HH:MM format
     # Set the Telegram URL using the provided bot token
     telegram_url="https://api.telegram.org/bot$bot_token/sendMessage"
 
