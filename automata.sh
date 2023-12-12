@@ -32,7 +32,7 @@ fi
 # main.sh
 
 # Source the configuration file
-# source config.sh
+# source config.txt
 start_command="/usr/local/bin/myria-node --start"
 stop_command="/usr/local/bin/myria-node --stop"
 
